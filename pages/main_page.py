@@ -8,60 +8,60 @@ class MainPage(base_page.BasePage):
             "Button login is not present"
         print(f"{inspect.currentframe().f_code.co_name} - OK")
 
-    def is_button_feedback(self):
-        assert self.hover_action(*locators.BasePageLocators.DETAILS), \
-            "Element 'Детали сотрудничества' is not present"
-        assert self.is_element_present(*locators.BasePageLocators.FEEDBACK), \
+    def is_button_blog(self):
+        assert self.hover_action(*locators.BasePageLocators.CONTACTS), \
+            "Element 'Контакти' is not present"
+        assert self.is_element_present(*locators.BasePageLocators.BLOG), \
             "Button feedback is not present"
         print(f"{inspect.currentframe().f_code.co_name} - OK")
 
     def is_button_delivery(self):
-        assert self.hover_action(*locators.BasePageLocators.DETAILS), \
-            "Element 'Детали сотрудничества' is not present"
+        assert self.hover_action(*locators.BasePageLocators.CONTACTS), \
+            "Element 'Контакти' is not present"
         assert self.is_element_present(*locators.BasePageLocators.DELIVERY), \
             "Button delivery is not present"
         print(f"{inspect.currentframe().f_code.co_name} - Ok")
 
-    def is_button_warranty(self):
-        assert self.hover_action(*locators.BasePageLocators.DETAILS), \
-            "Element 'Детали сотрудничества' is not present"
-        assert self.is_element_present(*locators.BasePageLocators.WARRANTY), \
+    def is_button_about(self):
+        assert self.hover_action(*locators.BasePageLocators.CONTACTS), \
+            "Element 'Контакти' is not present"
+        assert self.is_element_present(*locators.BasePageLocators.ABOUT), \
             "Button warranty is not present"
         print(f"{inspect.currentframe().f_code.co_name} - Ok")
 
     def is_number_phone(self):
-        assert self.is_element_present(*locators.BasePageLocators.PHONE), \
+        assert self.is_element_present(*locators.BasePageLocators.CONTACTS), \
             "Number phone is not present"
         print(f"{inspect.currentframe().f_code.co_name} - Ok")
 
-    def is_element_currency(self):
-        assert self.is_element_present(*locators.BasePageLocators.CURRENCY), \
+    def is_element_payment(self):
+        assert self.is_element_present(*locators.BasePageLocators.PAYMENT), \
             "The element currency is not present"
         print(f"{inspect.currentframe().f_code.co_name} - Ok")
 
-    def is_element_currency_uah(self):
-        assert self.click_element(*locators.BasePageLocators.CURRENCY), \
+    def is_element_lang_ua(self):
+        assert self.click_element(*locators.BasePageLocators.LANGUEGE_BTN), \
             "The element currency is not present or intractable"
-        assert self.is_element_present(*locators.BasePageLocators.UAH), \
+        assert self.is_element_present(*locators.BasePageLocators.UKRAINIAN_LANG), \
             "The element currency_uah is not present"
         print(f"{inspect.currentframe().f_code.co_name} - Ok")
 
-    def is_element_currency_usd(self):
-        assert self.click_element(*locators.BasePageLocators.CURRENCY), \
+    def is_element_lang_ru(self):
+        assert self.click_element(*locators.BasePageLocators.LANGUEGE_BTN), \
             "The element currency is not present or intractable"
-        assert self.is_element_present(*locators.BasePageLocators.USD), \
+        assert self.is_element_present(*locators.BasePageLocators.RUSSIAN_LANG), \
             "The element currency_usd is not present"
         print(f"{inspect.currentframe().f_code.co_name} - Ok")
 
-    def is_element_currency_eur(self):
-        assert self.click_element(*locators.BasePageLocators.CURRENCY), \
-            "The element currency is not present or intractable"
-        assert self.is_element_present(*locators.BasePageLocators.EUR), \
-            "The element currency_eur is not present"
-        print(f"{inspect.currentframe().f_code.co_name} - Ok")
+    #def is_element_currency_eur(self):
+    #    assert self.click_element(*locators.BasePageLocators.CURRENCY), \
+    #        "The element currency is not present or intractable"
+    #   assert self.is_element_present(*locators.BasePageLocators.EUR), \
+    #        "The element currency_eur is not present"
+    #    print(f"{inspect.currentframe().f_code.co_name} - Ok")
 
     def is_element_logo(self):
-        assert self.is_element_present(*locators.BasePageLocators.LOGO), \
+        assert self.is_element_present(*locators.BasePageLocators.LOGO_DESK), \
             "The element logo is not present"
         print(f"{inspect.currentframe().f_code.co_name} - Ok")
 
@@ -71,159 +71,89 @@ class MainPage(base_page.BasePage):
         print(f"{inspect.currentframe().f_code.co_name} - Ok")
 
     def is_search_button(self):
-        assert self.is_element_present(*locators.BasePageLocators.SEARCH_BUTTON), \
+        assert self.is_element_present(*locators.BasePageLocators.SEARCH_BTN), \
             "The search button is not present"
         print(f"{inspect.currentframe().f_code.co_name} - Ok")
 
-    def is_wish_button(self):
-        assert self.is_element_present(*locators.BasePageLocators.WISH_BUTTON), \
+    def is_comparison_button(self):
+        assert self.is_element_present(*locators.BasePageLocators.COMPARISON), \
             "The element is not present"
         print(f"{inspect.currentframe().f_code.co_name} - Ok")
 
     def is_cart_button(self):
-        assert self.is_element_present(*locators.BasePageLocators.CART_BUTTON), \
+        assert self.is_element_present(*locators.BasePageLocators.CART), \
             "The element is not present"
         print(f"{inspect.currentframe().f_code.co_name} - Ok")
 
-    def is_hity_button(self):
-        assert self.is_element_present(*locators.BasePageLocators.HITY), \
+    def is_inst_button(self):
+        assert self.is_element_present(*locators.BasePageLocators.INSTA_BTN), \
             "The element is not present"
         print(f"{inspect.currentframe().f_code.co_name} - Ok")
 
-    def is_skidki_button(self):
-        assert self.is_element_present(*locators.BasePageLocators.SKIDKI), \
+    def is_fb_button(self):
+        assert self.is_element_present(*locators.BasePageLocators.FB_BTN), \
             "The element is not present"
         print(f"{inspect.currentframe().f_code.co_name} - Ok")
 
-    def is_novinki_button(self):
-        assert self.is_element_present(*locators.BasePageLocators.NOVINKI), \
+    def is_hity_block(self):
+        assert self.is_element_present(*locators.BasePageLocators.HITS), \
             "The element is not present"
         print(f"{inspect.currentframe().f_code.co_name} - Ok")
 
-    def is_samsung_category(self):
-        assert self.is_element_present(*locators.BasePageLocators.HEAD_CAT_SAMSUNG), \
+    def is_new_nout_cat(self):
+        assert self.is_element_present(*locators.BasePageLocators.NEW_NOUT_CAT), \
             "The element is not present"
         print(f"{inspect.currentframe().f_code.co_name} - Ok")
 
-    def is_samsung_j701(self):
-        assert self.hover_action(*locators.BasePageLocators.HEAD_CAT_SAMSUNG), \
+    def is_used_nout_cat(self):
+        assert self.hover_action(*locators.BasePageLocators.USED_NOUT_CAT), \
             "The element is not present"
-        assert self.is_element_present(*locators.BasePageLocators.SUBCATEGORY_SAMSUNG_HEADER), \
-            "The element is not present"
-        print(f"{inspect.currentframe().f_code.co_name} - Ok")
-
+        
     def is_main_slider(self):
         assert self.is_element_present(*locators.MainPageLocators.SCREEN_SLIDER), \
             "The element is not present"
         print(f"{inspect.currentframe().f_code.co_name} - Ok")
 
-    def is_left_category_zaryadki(self):
-        assert self.is_element_present(*locators.MainPageLocators.CAT_ZARYADKI), \
+    def is_advertising_unit(self):
+        assert self.is_element_present(*locators.BasePageLocators.ADVERTISING_UNIT), \
             "The element is not present"
         print(f"{inspect.currentframe().f_code.co_name} - Ok")
 
-    def is_left_subcategory_powerbank(self):
-        assert self.hover_action(*locators.MainPageLocators.CAT_ZARYADKI), \
+    def is_cat_spare_parts(self):
+        assert self.hover_action(*locators.MainPageLocators.CAT_SPARE_PARTS), \
             "The element is not present"
-        assert self.is_element_present(*locators.MainPageLocators.SUB_CAT_POWER_BANK), \
-            "The element is not present"
-        print(f"{inspect.currentframe().f_code.co_name} - Ok")
-
-    def is_info_block_refund(self):
-        assert self.is_element_present(*locators.MainPageLocators.INFO_BLOCK_VOZVRAT_SREDSTV), \
+        assert self.is_element_present(*locators.MainPageLocators.SUB_CAT_SPARE_PARTS), \
             "The element is not present"
         print(f"{inspect.currentframe().f_code.co_name} - Ok")
 
-    def is_info_block_delivery(self):
-        assert self.is_element_present(*locators.MainPageLocators.INFO_BLOCK_DOSTAVKA), \
+    def is_delivery_block(self):
+        assert self.is_element_present(*locators.MainPageLocators.DELIVERY_BLOCK), \
             "The element is not present"
         print(f"{inspect.currentframe().f_code.co_name} - Ok")
 
-    def is_info_block_otsrochka(self):
-        assert self.is_element_present(*locators.MainPageLocators.INFO_BLOCK_OTSROCHKA), \
+    def is_about_block(self):
+        assert self.is_element_present(*locators.MainPageLocators.ABOUT_BLOCK), \
             "The element is not present"
         print(f"{inspect.currentframe().f_code.co_name} - Ok")
 
-    def is_info_block_support(self):
-        assert self.is_element_present(*locators.MainPageLocators.INFO_BLOCK_SUPPORT), \
+    def is_payment_block(self):
+        assert self.is_element_present(*locators.MainPageLocators.PAYMENT_BLOCK), \
             "The element is not present"
         print(f"{inspect.currentframe().f_code.co_name} - Ok")
 
-    def is_button_show_new_products(self):
-        assert self.is_element_present(*locators.MainPageLocators.BUTTON_SHOW_NEW_PRODUCTS), \
+    def is_blog_block(self):
+        assert self.is_element_present(*locators.MainPageLocators.BLOG_BLOCK), \
             "The element is not present"
         print(f"{inspect.currentframe().f_code.co_name} - Ok")
 
-    def is_button_show_prev_new_products(self):
-        assert self.is_element_present(*locators.MainPageLocators.BUTTON_PREV_NEW_PRODUCTS), \
+    def is_contacts_block(self):
+        assert self.is_element_present(*locators.MainPageLocators.CONTACTS_BLOCK), \
             "The element is not present"
         print(f"{inspect.currentframe().f_code.co_name} - Ok")
 
-    def is_button_show_next_new_products(self):
-        assert self.is_element_present(*locators.MainPageLocators.BUTTON_NEXT_NEW_PRODUCTS), \
+    def is_scroll_to_top_button(self):
+        assert self.is_element_present(*locators.MainPageLocators.SCROLL_TO_TOP_BTN), \
             "The element is not present"
         print(f"{inspect.currentframe().f_code.co_name} - Ok")
 
-    def is_section_new_products(self):
-        assert self.is_element_present(*locators.MainPageLocators.SECTION_NEW_PRODUCTS), \
-            "The element is not present"
-        print(f"{inspect.currentframe().f_code.co_name} - Ok")
-
-    def is_new_product_8(self):
-        assert self.is_element_present(*locators.MainPageLocators.NEW_PRODUCT_8), \
-            "The element is not present"
-        print(f"{inspect.currentframe().f_code.co_name} - Ok")
-
-    def is_button_show_hits(self):
-        assert self.is_element_present(*locators.MainPageLocators.BUTTON_SHOW_HITS), \
-            "The element is not present"
-        print(f"{inspect.currentframe().f_code.co_name} - Ok")
-
-    def is_button_prev_hits(self):
-        assert self.is_element_present(*locators.MainPageLocators.BUTTON_PREV_HITS), \
-            "The element is not present"
-        print(f"{inspect.currentframe().f_code.co_name} - Ok")
-
-    def is_button_next_hits(self):
-        assert self.is_element_present(*locators.MainPageLocators.BUTTON_NEXT_HITS), \
-            "The element is not present"
-        print(f"{inspect.currentframe().f_code.co_name} - Ok")
-
-    def is_section_hits(self):
-        assert self.is_element_present(*locators.MainPageLocators.SECTION_HITS), \
-            "The element is not present"
-        print(f"{inspect.currentframe().f_code.co_name} - Ok")
-
-    def is_button_prev_trends(self):
-        assert self.is_element_present(*locators.MainPageLocators.BUTTON_PREV_TREND), \
-            "The element is not present"
-        print(f"{inspect.currentframe().f_code.co_name} - Ok")
-
-    def is_button_next_trends(self):
-        assert self.is_element_present(*locators.MainPageLocators.BUTTON_NEXT_TREND), \
-            "The element is not present"
-        print(f"{inspect.currentframe().f_code.co_name} - Ok")
-
-    def is_button_subscribe(self):
-        assert self.is_element_present(*locators.BasePageLocators.SUBSCRIBE), \
-            "The element is not present"
-        print(f"{inspect.currentframe().f_code.co_name} - Ok")
-
-    def is_logo_footer(self):
-        assert self.is_element_present(*locators.BasePageLocators.LOGO_FOOTER), \
-            "The element is not present"
-        print(f"{inspect.currentframe().f_code.co_name} - Ok")
-
-    def subscribe_action(self, email):
-        assert self.input_data(*locators.BasePageLocators.INPUT_SUBSCRIBE, email), \
-            "The element is not present"
-        self.explicit_wait(4)
-        assert self.click_element(*locators.BasePageLocators.SUBSCRIBE), \
-            "The element is not present or intractable"
-        print(f"{inspect.currentframe().f_code.co_name} - Ok")
-
-    def is_alert_success_after_subscribe(self):
-        assert self.is_element_appears_after_while(*locators.BasePageLocators.ALERT_SUCCESS, timeout=5), \
-            "The element is not present"
-        print(f"{inspect.currentframe().f_code.co_name} - Ok")
 

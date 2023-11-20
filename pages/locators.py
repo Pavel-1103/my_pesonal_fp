@@ -11,6 +11,8 @@ class BasePageLocators:
     DELIVERY = (By.XPATH, "//*[@id='right-colume-1']/ul[1]/li[3]/a")
     ABOUT = (By.XPATH, "//*[@id='right-colume-1']/ul[1]/li[2]/a")
     MAIN = (By.XPATH, "//*[@id='right-colume-1']/ul[1]/li[1]/a")
+    SEARCH_INPUT = (By.XPATH, "//input[@name='search']")
+    SEARCH_BTN = (By.XPATH, "//div[@class='input-group-btn']/button")
 
     LANGUEGE_BTN = (By.XPATH, "//*[@id='form-language']/div/button")
     UKRAINIAN_LANG = (By.XPATH, "//*[@id='form-language']/div/ul/li[1]/button")
