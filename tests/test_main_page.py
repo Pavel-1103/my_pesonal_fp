@@ -24,63 +24,48 @@ class TestMainPage:
         self.link_to_cabinet = browser.current_url
         page = MainPage(browser, self.link_to_cabinet)
         page.is_button_login()
-        page.is_button_feedback()
+        page.is_button_blog()
 
     def test_main_page_header(self, browser):
         self.link_to_cabinet = browser.current_url
         page = MainPage(browser, self.link_to_cabinet)
         page.is_button_login()
-        page.is_button_feedback()
+        page.is_button_blog()
         page.is_button_delivery()
-        page.is_button_warranty()
+        page.is_button_about()
         page.is_number_phone()
-        page.is_element_currency()
-        page.is_element_currency_uah()
-        page.is_element_currency_usd()
-        page.is_element_currency_eur()
+        page.is_element_payment()
+        page.is_element_lang_ua()
+        page.is_element_lang_ru()
         page.is_element_logo()
         page.is_search_input_field()
         page.is_search_button()
-        page.is_wish_button()
+        page.is_comparison_button()
         page.is_cart_button()
-        page.is_hity_button()
-        page.is_skidki_button()
-        page.is_novinki_button()
-        page.is_samsung_category()
-        page.is_samsung_j701()
+        page.is_hity_block()
+        page.is_inst_button()
+        page.is_fb_button()
+        page.is_new_nout_cat()
+        page.is_used_nout_cat()
 
     def test_main_page_content(self, browser):
         self.link_to_cabinet = browser.current_url
         page = MainPage(browser, self.link_to_cabinet)
         page.is_main_slider()
-        page.is_left_category_zaryadki()
-        page.is_left_subcategory_powerbank()
-        page.is_info_block_refund()
+        page.is_advertising_unit()
+        page.is_cat_spare_parts()
+        page.is_about_block()
         page.is_info_block_delivery()
-        page.is_info_block_otsrochka()
-        page.is_info_block_support()
-        page.is_button_show_new_products()
-        page.is_button_show_prev_new_products()
-        page.is_button_show_next_new_products()
-        page.is_section_new_products()
-        page.is_new_product_8()
-        page.is_button_show_hits()
-        page.is_button_prev_hits()
-        page.is_button_next_hits()
-        page.is_section_hits()
-        page.is_button_prev_trends()
-        page.is_button_next_trends()
+        page.is_payment_block()
+        page.is_contacts_block()
+
 
     def test_main_page_footer(self, browser):
         self.link_to_cabinet = browser.current_url
         page = MainPage(browser, self.link_to_cabinet)
-        page.is_button_subscribe()
-        page.is_logo_footer()
+        page.is_scroll_to_top_button()
+        
 
-    def test_main_page_subscribe_action(self, browser):
-        self.link_to_cabinet = browser.current_url
-        page = MainPage(browser, self.link_to_cabinet)
-        page.subscribe_action(self.email_for_subscribe)
-        page.is_alert_success_after_subscribe()
+
 
 
