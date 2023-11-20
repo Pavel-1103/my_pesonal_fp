@@ -53,13 +53,14 @@ class SignupLoginPageLocators:
 
 
 class OrderPageLocators:
-    FIRST_PRODUCT = (By.XPATH, "//h4[@class='protitle']/a[@href = 'index.php?route=product/product&product_id=41989']")
-    BUTTON_ADD_FIRST_PRODUCT = (By.XPATH, "//button[@id='button-cart']")
-    PRICE_FIRST_PRODUCT = (By.XPATH, "//h2[@class = 'pro-price']")
+    FIRST_PRODUCT = (By.XPATH, "//h4//a[@href='index.php?route=product/product&product_id=41989']")
+    BUTTON_ADD_FIRST_PRODUCT = (By.XPATH, "//div[@id='content']/div[5]/div[5]//button[1]")
+    PRICE_FIRST_PRODUCT = (By.XPATH, "//div[@id='content']/div[5]/div[5]//div[@class='price']")
     BTN_CONTINUE_SHOP_POPUP = (By.XPATH, "//button[text()='Продовжити покупки']")
 
-    SECOND_PRODUCT_INPUT = (By.XPATH, "//div[@class='caption']//a[@href='index.php?route=product/product&product_id=41988']")
-    PRICE_SECOND_PRODUCT = (By.XPATH, "//h2[@class='pro-price']")
+    SECOND_PRODUCT_INPUT = (By.XPATH, "//h4//a[@href='index.php?route=product/product&product_id=41988']")
+    BUTTON_ADD_SECOND_PRODUCT = (By.XPATH, "//div[@id='content']/div[5]/div[6]//button[1]")
+    PRICE_SECOND_PRODUCT = (By.XPATH, "//div[@id='content']/div[5]/div[6]//div[@class='price']")
     BUTTON_ADD_SECOND_PRODUCT = (By.XPATH, "//button[text()='Продовжити покупки']")
     TOTAL_PRICE = (By.XPATH, "//span[@id='cart-total']")
     
