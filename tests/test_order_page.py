@@ -48,7 +48,7 @@ class TestOrderPage:
         page = OrderPage(browser, self.link_to_cabinet)
         page.press_btn_checkout_popup()
         page.explicit_wait(2)
-        page.check_total_price_qty(price_1_product, price_2_product, qty=3) # qty - Quantity - кількість
+        page.check_total_price_qty(price_1_product, price_2_product, qty=2) # qty - Quantity - кількість
 
     def test_checkout(self, browser):
         self.link_to_cabinet = browser.current_url
